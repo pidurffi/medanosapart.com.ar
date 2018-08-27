@@ -1,0 +1,21 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+#   database_name: bf_mansion
+#   database_user: bf_mansion
+#   database_password: nmhlg0aEoXPLOwfm
+    database_name: medanos2_2016
+    database_user: medanos2_2016
+    database_password: TbB3aHKxQNOa    
+    mailer_transport: smtp
+    mailer_host: mail.medanosapart.com.ar
+    mailer_user: consultas+medanosapart.com.ar
+    mailer_password: Zz0SJPGWMqyT
+    mailer_port: 26
+    secret: 681ec15606bf7b3b838c03ff3b86031b39cbeb7c
+    asunto_contacto: Contacto de _nombre_ desde medanosapart.com.ar
+    contacto_from: consultas@medanosapart.com.ar
+#    contacto_to: hmolinari@gmail.com
+    contacto_to: info@medanosapart.com.ar
+    

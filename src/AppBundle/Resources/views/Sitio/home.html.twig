@@ -1,0 +1,284 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+
+
+{% block content %}
+
+	<section class="intro">
+		<div class="slider">
+			<img src="{{ asset('bundles/app/images/slider/001.jpg') }}" alt="Médanos Apart - Las Gaviotas, Mar de las Pampas">
+			<img src="{{ asset('bundles/app/images/slider/002.jpg') }}" alt="Médanos Apart - Las Gaviotas, Mar de las Pampas">
+			<img src="{{ asset('bundles/app/images/slider/003.jpg') }}" alt="Médanos Apart - Las Gaviotas, Mar de las Pampas">
+		</div>
+		<div class="sub-header">
+			<div class="container">
+				<ul>
+					<li><span class="icon-mail"></span> info@medanosapart.com.ar</li>
+					<li><span class="icon-pin"></span> Ubicación</li>
+					<li><span class="icon-telefono"></span> (02255) 15 50.7575</li>
+				</ul>
+			</div>
+		</div>
+		<header>
+			<div class="container">
+				<button class="hamburger hamburger--spin" type="button">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</button>
+				<div class="logo"></div>
+				<nav>
+					<ul>
+						<li><a href="{{ path('en_la_playa') }}">En la playa</a></li>
+						<li><a href="{{ path('en_el_medano') }}">En el médano</a></li>
+						<li><a href="{{ path('en_el_bosque') }}">En el bosque</a></li>
+						<li class="common"><a data-scroll href="#services">Servicios</a></li>
+						<li><a data-scroll href="#ubicacion">Cómo llegar</a></li>
+						<li><a data-scroll href="#contact">Contacto</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<div class="container">
+			<div class="intro-links">
+				<span>Tenemos tres opciones para tu estadía</span>
+				<ul>
+					<li><a href="{{ path('en_la_playa') }}">En la playa</a></li>
+					<li><a href="{{ path('en_el_medano') }}">En el médano</a></li>
+					<li><a href="{{ path('en_el_bosque') }}">En el bosque</a></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+
+	{% if promociones|length > 0 %}
+	<section class="banners">
+		<div class="container">
+			<div class="row">
+				{% for promocion in promociones %}
+				<div class="col-sm-4">
+					<div class="item">
+						<h2>{{ promocion.nombre }}</h2>
+						<img src="{{ asset('/uploads/promociones/' ~ promocion.imagen ) }}" alt="Médanos Apart - Las Gaviotas, Mar de las Pampas">
+						<p>{{ promocion.descripcion|nl2br }}</p>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+	{% endif %}
+
+	<section class="welcome">
+		<div class="container">
+			<h2>Bienvenidos a Médanos - Las Gaviotas - Mar de las pampas</h2>
+			<p>Estamos en Las Gaviotas, entre Mar de Las Pampas y Mar Azul, un paraje con amplias playas que se funden con los bosques costeros.<br>
+			El complejo cuenta con tres propuestas de alojamiento, desde la zona más sociable, con piscina y juegos para niños, a estar inmerso en el bosque del médano, a gozar de la inmensidad de la playa y la vista del mar.</p>
+		</div>
+	</section>
+
+	<section class="services" id="services">
+		<div class="container">
+			<h2>Servicios</h2>
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="item">
+						<span class="icon-tostadora"></span>
+						<p>Desayuno</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="item">
+						<span class="icon-nadar"></span>
+						<p>Piscina</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="item">
+						<span class="icon-pileta"></span>
+						<p>Piscina para niños</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="item">
+						<span class="icon-sol"></span>
+						<p>Solarium</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="item">
+						<span class="icon-mesa"></span>
+						<p>Quincho de uso común con amplia parrilla y muebles de jardín</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="item">
+						<span class="icon-puertas"></span>
+						<p>Salón desayunador y de usos múltiples</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="item">
+						<span class="icon-parrilla"></span>
+						<p>Deck individual con parrilla</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="item">
+						<span class="icon-limpieza"></span>
+						<p>Limpieza diaria (salvo los días Martes)</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="item">
+						<span class="icon-cama"></span>
+						<p>Ropa blanca</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="item">
+						<span class="icon-codigo"></span>
+						<p>Alarma individual</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="item">
+						<span class="icon-dvd-rep"></span>
+						<p>Reproductor de DVD</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="item">
+						<span class="icon-tv"></span>
+						<p>TV por cable</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="item">
+						<span class="icon-dvd"></span>
+						<p>Préstamo de películas en DVD</p>
+					</div>
+				</div>
+				
+				<!--
+				<div class="col-sm-4">
+					<div class="item">
+						<span class="icon-estufa"></span>
+						<p>Calefactores eléctricos y por tiro balanceado, salamandra (en apart de 2 ambientes)</p>
+					</div>
+				</div>
+				-->
+				<div class="col-sm-4">
+					<div class="item">
+						<span class="icon-horno"></span>
+						<p>Cocina con horno</p>
+					</div>
+				</div>
+				
+				<!--
+				<div class="col-sm-4">
+					<div class="item">
+						<span class="icon-ducha"></span>
+						<p>Baño con bañera (en cabañas de 1 ambiente y en Loft), con ducha (en cabañas de 3 ambientes)</p>
+					</div>
+				</div>
+				-->
+				<div class="col-sm-4">
+					<div class="item">
+						<span class="icon-hidro"></span>
+						<p>Baño con hidromasaje (solo en apart de 2 ambientes)</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				
+				
+				<div class="col-sm-4">
+					<div class="item">
+						<span class="icon-reposera"></span>
+						<p>Reposeras para llevar a la playa, sombrillas para llevar a la playa (solo Enero y Febrero)</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="item">
+						<span class="icon-cuna"></span>
+						<p>Cuna, sillita alta y bañera para bebés</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="item">
+						<span class="icon-garage"></span>
+						<p>Estacionamiento cubierto para apartamentos en la playa, descubierto y semicubierto para las otras unidades</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="item">
+						<span class="icon-juegos-jardin"></span>
+						<p>Juegos de jardín para niños</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="item">
+						<span class="icon-ventilador"></span>
+						<p>Ventiladores de techo</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="item">
+						<span class="icon-wifi"></span>
+						<p>Wi-Fi</p>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</section>
+
+	<section class="map" id="ubicacion">
+		<div class="container">
+			<h2>Ubicación</h2>
+		</div>
+		<div id="map"></div>
+	</section>
+
+	<section class="contact" id="contact">
+		<div class="container">
+			<h2>Contacto</h2>
+			<form  id="form_contacto" method="post" onsubmit="return validar_form();">
+				<div class="row">
+					<div class="col-sm-6">
+						<input type="text" placeholder="Nombre" required="required" id="form_nombre">
+						<input type="email" placeholder="Mail" required="required" id="form_email">
+						<input type="text" placeholder="Teléfono" required="required" id="form_telefono">
+					</div>
+					<div class="col-sm-6">
+						<textarea placeholder="Comentario" id="form_mensaje"></textarea>
+					</div>
+					<div class="col-sm-12">
+						<a class="send">Enviar</a>
+						<div class="spinner" id="form_img_loading">
+						<div class="rect1"></div>
+						<div class="rect2"></div>
+						<div class="rect3"></div>
+						<div class="rect4"></div>
+						<div class="rect5"></div>
+					</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</section>
+
+
+	
+{% endblock %}	

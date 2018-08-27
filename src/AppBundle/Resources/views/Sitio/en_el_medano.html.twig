@@ -1,0 +1,84 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+{% block content %}	
+
+	<section class="intro int">
+		<div class="slider-int">
+			<img src="{{ asset('bundles/app/images/slider/-002.jpg') }}" alt="">
+			
+		</div>
+		<div class="sub-header">
+			<div class="container">
+				<ul>
+					<li><span class="icon-mail"></span> info@medanosapart.com.ar</li>
+					<li><span class="icon-pin"></span> Ubicación</li>
+					<li><span class="icon-telefono"></span> (02255) 15 50.7575</li>
+				</ul>
+			</div>
+		</div>
+		<header>
+			<div class="container">
+				<button class="hamburger hamburger--spin" type="button">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</button>
+				<div class="logo medano"></div>
+				<nav>
+					<ul>
+						<li><a href="{{ path('homepage') }}">Inicio</a></li>
+						<li><a data-scroll href="#info">Apart y Cabañas</a></li>
+						<li><a data-scroll href="#gallery">Galería de fotos</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+	</section>
+
+	<section class="info" id="info">
+		<div class="container">
+			<h2>Apart y Cabañas</h2>
+			<p>Todas las unidades están ubicadas a 10m. de la playa, al pie del médano costero, con vista al bosque y salida directa al mar.</p>
+			<h3>Apart para 2 a 4 personas</h3>
+			<p>Amplio apartamento de 2 ambientes, dormitorio matrimonial con sommier de 1,60,  living con dos divanes cama, comedor, cocina completa, baño con hidromasaje doble. Deck con parrilla individual.</p>
+			<h3>Cabañas de 2 ambientes para 2 a 4 personas, en Planta baja y planta alta</h3>
+			<p>Constan de living con diván y carricama, comedor integrado, cocina completa separada, dormitorio matrimonial independiente, antebaño y baño. Deck con parrilla individual.</p>
+			<h3>Cabañas de 3 ambientes en dos plantas, para 3 a 5 personas</h3>
+			<p>Amplias cabañas. PB: living con TV por cable, comedor,  cocina completa,  baño. PA: 2 dormitorios, uno matrimonial con TV por cable, y otro con cucheta y cama simple. Deck con parrilla individual.</p>
+			<p><b>Espacio de estacionamiento (dentro del complejo pero NO TECHADO)</b></p>
+		</div>
+	</section>
+	
+	<section class="gallery" id="gallery">
+		<div class="container">
+			<h2>Galería de fotos</h2>
+			<ul class="int-med">
+				<li class="one">Cabañas para 3/5 personas</li>
+				<li class="two">Apart para 2/4 personas</li>
+				<li class="three">Cabañas para 2/4 personas</li>
+				<li class="four">Espacios de uso común</li>
+			</ul>
+			<div class="owl-gallery">
+				<div>
+					<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+						{{ render(controller('AppBundle:Default:galeria',{galeria_id: 4})) }} {# Cabañas para 3/5 personas #}
+					</div>
+				</div>
+				<div>
+					<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+						{{ render(controller('AppBundle:Default:galeria',{galeria_id: 5})) }} {# Apart para 2/4 personas #}
+					</div>
+				</div>
+				<div>
+					<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+						{{ render(controller('AppBundle:Default:galeria',{galeria_id: 6})) }} {# Espacios comunes #}
+					</div>
+				</div>
+				<div>
+					<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+						{{ render(controller('AppBundle:Default:galeria',{galeria_id: 3})) }} {# Espacios de uso común #}
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

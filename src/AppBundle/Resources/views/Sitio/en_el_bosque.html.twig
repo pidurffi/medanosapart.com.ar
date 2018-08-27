@@ -1,0 +1,80 @@
+{% extends "AppBundle::Sitio/layout.html.twig" %}
+{% block content %}	
+
+	<section class="intro int">
+		<div class="slider-int">
+			<img src="{{ asset('bundles/app/images/slider/-003.jpg') }}" alt="">
+		</div>
+		<div class="sub-header">
+			<div class="container">
+				<ul>
+					<li><span class="icon-mail"></span> info@medanosapart.com.ar</li>
+					<li><span class="icon-pin"></span> Ubicación</li>
+					<li><span class="icon-telefono"></span> (02255) 15 50.7575</li>
+				</ul>
+			</div>
+		</div>
+		<header>
+			<div class="container">
+				<button class="hamburger hamburger--spin" type="button">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</button>
+				<div class="logo bosque"></div>
+				<nav>
+					<ul>
+						<li><a href="{{ path('homepage') }}">Inicio</a></li>
+						<li><a data-scroll href="#info">Las Cabañas</a></li>
+						<li><a data-scroll href="#gallery">Galería de fotos</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+	</section>
+
+	<section class="info" id="info">
+		<div class="container">
+			<h2>Las Cabañas</h2>
+			<p>Todas las unidades tienen vista a la piscina, y están ubicadas a tan solo 50 metros de la playa</p>
+			<h3>Cabaña para 3 a 5 personas, 3 ambientes en 2 plantas</h3>
+			<p><b>PB:</b> living con TV por cable, comedor,  cocina completa,  baño con ducha, jardín con parrilla individual.</p>
+			<p><b>PA:</b> 2 dormitorios, uno matrimonial con TV por cable, y otro con cucheta y cama simple.</p>
+			<h3>Cabañas para 4 a 6 personas, 3 ambientes en 2 plantas con 2 baños</h3>
+			<p><b>PB:</b> living con diván cama y TV por cable , comedor, cocina completa, toilette, jardín con parrilla individual.</p>
+			<p><b>PA:</b> 2 dormitorios, uno matrimonial con TV por cable, y otro con cucheta y cama simple, baño completo.</p>
+			<h3>Sector de uso común</h3>
+			<p>En este sector del complejo se encuentran el quincho de uso común, los juegos para niños, la piscina con deck y un amplio solárium con reposeras, tumbonas y sombrillas. También el salón desayunador, un espacio de usos multiples con amplia terraza hacia el bosque y la piscina.</p>
+			<p><b>Estacionamientos individuales semicubiertos con media sombra.</b></p>
+		</div>
+	</section>
+	
+
+	<section class="gallery" id="gallery">
+		<div class="container">
+			<h2>Galería de fotos</h2>
+			<ul>
+				<li class="one">Bosque 3-5 personas</li>
+				<li class="two">Bosque 6 personas</li>
+				<li class="three">Espacios de uso común</li>
+			</ul>
+			<div class="owl-gallery">
+				<div>
+					<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+						{{ render(controller('AppBundle:Default:galeria',{galeria_id: 7})) }} {# Bosque 3-5 personas #}
+					</div>
+				</div>
+				<div>
+					<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+						{{ render(controller('AppBundle:Default:galeria',{galeria_id: 8})) }} {# Bosque 6 personas #}
+					</div>
+				</div>
+				<div>
+					<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+						{{ render(controller('AppBundle:Default:galeria',{galeria_id: 3})) }} {# Espacios comunes #}
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

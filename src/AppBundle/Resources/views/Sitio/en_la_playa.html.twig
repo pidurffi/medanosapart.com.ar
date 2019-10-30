@@ -42,22 +42,25 @@
 			<p>En el nivel superior balconeando está el dormitorio con 2 camas simples más la habitación matrimonial y un toillette.</p>
 			
 			<h2 class="sub">Apartamento en planta alta</h2>
-			
-			<p> 3 ambientes desarrollado en una sola planta.
+			<p> 3 ambientes desarrollado en una sola planta.</p>
 			<p>Consta de living , comedor, cocina integrada, habitación matrimonial , dormitorio con 2 camas individuales , antebaño y baño con ducha.</p>
 			<p>Balcón privado con parrilla y la mejor vista al mar.</p>
 			<p>En el exterior están las parrillas individuales de la planta baja y en la parte posterior las cocheras cubiertas desde las cuales se accede por una escalera.</p>
-</p>
+			
+			<h2 class="sub">Suite matrimonial en planta baja</h2>
+            <p>Habitación matrimonial  con baño y kitchenette con anafe, microondas y heladera bajo mesada.</p>
+            <p>Ubicada en la playa con vista al bosque. Solo vista al mar y salida directa a la playa desde la cocina.</p>
 		</div>
 	</section>
 
 	<section class="gallery" id="gallery">
 		<div class="container">
 			<h2>Galería de fotos</h2>
-			<ul>
-				<li class="one">Apartamentos de 3 ambientes</li>
-				<li class="two">Apartamento en planta alta</li>
-				<li class="three">Espacios de uso común</li>
+			<ul class="int-med">
+				<li class="one">Apart de 3 ambientes</li>
+				<li class="two">Apart planta alta</li>
+				<li class="three">Suite planta baja</li>
+				<li class="four">Espacios de uso común</li>
 			</ul>
 			<div class="owl-gallery">
 				<div>
@@ -68,6 +71,11 @@
 				<div>
 					<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
 						{{ render(controller('AppBundle:Default:galeria',{galeria_id: 1})) }} {# La Cabaña #}
+					</div>
+				</div>
+				<div>
+					<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+						{{ render(controller('AppBundle:Default:galeria',{galeria_id: 9})) }} {# La Cabaña #}
 					</div>
 				</div>
 				<div>

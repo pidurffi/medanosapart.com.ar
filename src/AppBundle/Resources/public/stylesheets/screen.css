@@ -2352,7 +2352,8 @@ footer p {
 /* line 492, ../sass/screen.scss */
 footer ul li {
   display: inline-block;
-  margin-left: 20px;
+  margin-left: 10px;
+  
 }
 /* line 495, ../sass/screen.scss */
 footer ul li a {

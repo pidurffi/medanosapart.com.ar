@@ -13,6 +13,7 @@
 	<link href="{{ asset('bundles/app/stylesheets/default-skin.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
 	<link href="{{ asset('bundles/app/stylesheets/owl.carousel.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
 	<link href="{{ asset('bundles/app/stylesheets/owl.transitions.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
+	<link href="{{ asset('bundles/app/stylesheets/photo-sphere-viewer.min.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
 	<!-- FONTS -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 	<!-- JS -->
@@ -23,7 +24,20 @@
 	<script type="text/javascript" src="{{ asset('bundles/app/js/owl.carousel.min.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('bundles/app/js/scroll.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('bundles/app/js/contacto.js') }}"></script>
+
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBocLFC5GH0pqztqWhG3i2HJbAW68xu8pQ"></script>
+
+
+	<div id="viewer"></div>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8.1.0/dist/polyfill.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/dot@1.1.2/doT.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/uevent@1.0.0/uevent.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@3.5.0/dist/photo-sphere-viewer.min.js"></script>
+
+
+
 	<script>
   function initialize() {
 	var isDraggable = $(document).width() > 480 ? true : false;  

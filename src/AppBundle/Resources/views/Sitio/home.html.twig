@@ -77,6 +77,43 @@
 		</div>
 	</section>
 
+	<section class="welcome">
+		<div class="container">
+			<div id="viewer"></div>
+
+			<style>
+			  #viewer {
+			  	display: block;
+			    
+			    height: 500px;
+			  }
+			</style>
+			<script>
+			  var viewer = new PhotoSphereViewer({
+			    container: 'viewer',
+			    panorama: '/Bryce-Canyon-National-Park-Mark-Doliner.jpg'
+			  });
+			</script>
+
+
+			{#
+			<script>
+			var PSV = new PhotoSphereViewer({
+			panorama: '/Bryce-Canyon-National-Park-Mark-Doliner.jpg',
+			container: 'viewer',
+			default_fov: 70,
+			default_lat: 0.3,
+			mousewheel: false,
+			touchmove_two_fingers: true
+			});
+			</script>
+			#}
+		</div>
+	</section>
+
+
+	
+
 	<section class="services" id="services">
 		<div class="container">
 			<h2>Servicios</h2>

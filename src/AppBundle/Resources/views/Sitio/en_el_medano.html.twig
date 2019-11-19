@@ -38,47 +38,65 @@
 		<div class="container">
 			<h2>Apart y Cabañas</h2>
 			<p>Todas las unidades están ubicadas a 10m. de la playa, al pie del médano costero, con vista al bosque y salida directa al mar.</p>
-			<h3>Apart para 2 a 4 personas</h3>
-			<p>Amplio apartamento de 2 ambientes, dormitorio matrimonial con sommier de 1,60,  living con dos divanes cama, comedor, cocina completa, baño con hidromasaje doble. Deck con parrilla individual.</p>
-			<h3>Cabañas de 2 ambientes para 2 a 4 personas, en Planta baja y planta alta</h3>
-			<p>Constan de living con diván y carricama, comedor integrado, cocina completa separada, dormitorio matrimonial independiente, antebaño y baño. Deck con parrilla individual.</p>
-			<h3>Cabañas de 3 ambientes en dos plantas, para 3 a 5 personas</h3>
-			<p>Amplias cabañas. PB: living con TV por cable, comedor,  cocina completa,  baño. PA: 2 dormitorios, uno matrimonial con TV por cable, y otro con cucheta y cama simple. Deck con parrilla individual.</p>
+			
+			
+			
 			<p><b>Espacio de estacionamiento (dentro del complejo pero NO TECHADO)</b></p>
 		</div>
 	</section>
 	
 	<section class="gallery" id="gallery">
 		<div class="container">
-			<h2>Galería de fotos</h2>
 			<ul class="int-med">
-				<li class="one">Cabañas para 3/5 personas</li>
-				<li class="two">Apart para 2/4 personas</li>
-				<li class="three">Cabañas para 2/4 personas</li>
+				<li class="one">Apart para 2 a 4 personas</li>
+				<li class="two">Cabañas para 2 a 4 personas</li>
+				<li class="three">Cabañas para 3 a 5 personas</li>
 				<li class="four">Espacios de uso común</li>
 			</ul>
 			<div class="owl-gallery">
 				<div>
+          <h3 class="owl-title">Apart para 2 a 4 personas</h3>
+			    <p class="owl-text">Amplio apartamento de 2 ambientes, dormitorio matrimonial con sommier de 1,60,  living con dos divanes cama, comedor, cocina completa, baño con hidromasaje doble. Deck con parrilla individual.</p>
+          <h4 class="owl-subtitle">Recorrido panorámico</h4>
+          <div id="container" style="width:100%;height:500px;overflow:hidden;"></div>
+          <h4 class="owl-subtitle">Galería de fotos</h4>
 					<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-						{{ render(controller('AppBundle:Default:galeria',{galeria_id: 4})) }} {# Cabañas para 3/5 personas #}
+						{{ render(controller('AppBundle:Default:galeria',{galeria_id: 4})) }}
+					</div>
+				</div>
+				<div>
+          <h3 class="owl-title">Cabañas de 2 ambientes para 2 a 4 personas, en Planta baja y planta alta</h3>
+			    <p class="owl-text">Constan de living con diván y carricama, comedor integrado, cocina completa separada, dormitorio matrimonial independiente, antebaño y baño. Deck con parrilla individual.</p>
+					<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+						{{ render(controller('AppBundle:Default:galeria',{galeria_id: 5})) }}
+					</div>
+				</div>
+				<div>
+          <h3 class="owl-title">Cabañas de 3 ambientes en dos plantas, para 3 a 5 personas</h3>
+			    <p class="owl-text">Amplias cabañas. PB: living con TV por cable, comedor,  cocina completa,  baño. PA: 2 dormitorios, uno matrimonial con TV por cable, y otro con cucheta y cama simple. Deck con parrilla individual.</p>
+					<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+						{{ render(controller('AppBundle:Default:galeria',{galeria_id: 6})) }}
 					</div>
 				</div>
 				<div>
 					<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-						{{ render(controller('AppBundle:Default:galeria',{galeria_id: 5})) }} {# Apart para 2/4 personas #}
-					</div>
-				</div>
-				<div>
-					<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-						{{ render(controller('AppBundle:Default:galeria',{galeria_id: 6})) }} {# Espacios comunes #}
-					</div>
-				</div>
-				<div>
-					<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-						{{ render(controller('AppBundle:Default:galeria',{galeria_id: 3})) }} {# Espacios de uso común #}
+						{{ render(controller('AppBundle:Default:galeria',{galeria_id: 3})) }}
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
+
+  <script type="text/javascript">
+	
+    // create the panorama player with the container
+    pano=new pano2vrPlayer("container");
+    // add the skin object
+    skin=new pano2vrSkin(pano);
+    // load the configuration
+  
+    window.addEventListener("load", function() {
+      pano.readConfigUrlAsync("{{ asset('bundles/app/images/panoramicas/habitacion-1/pano.xml') }}");
+    });
+  </script>
 {% endblock %}

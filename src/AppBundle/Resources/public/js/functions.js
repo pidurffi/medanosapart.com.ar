@@ -43,6 +43,8 @@ $(document).ready(function(){
         pagination: false,
         slideSpeed: 1000,
         rewindSpeed: 1000,
+        touchDrag  : false,
+        mouseDrag  : false,
         transitionStyle : "backSlide",
         afterAction: owlGalleryCurrentPos
     });

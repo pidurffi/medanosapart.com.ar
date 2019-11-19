@@ -67,6 +67,7 @@
 				<div>
           <h3 class="owl-title">Cabañas de 2 ambientes para 2 a 4 personas, en Planta baja y planta alta</h3>
 			    <p class="owl-text">Constan de living con diván y carricama, comedor integrado, cocina completa separada, dormitorio matrimonial independiente, antebaño y baño. Deck con parrilla individual.</p>
+			    <h4 class="owl-subtitle">Recorrido panorámico</h4>
 					<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
 						{{ render(controller('AppBundle:Default:galeria',{galeria_id: 5})) }}
 					</div>
@@ -99,9 +100,10 @@
       pano.readConfigUrlAsync("{{ asset('bundles/app/images/panoramicas/habitacion-1/pano.xml') }}");
     });
   </script> 
-  #}
+  
 
   <script type="text/javascript">
    carga("{{ asset('bundles/app/images/panoramicas/habitacion-1/') }}");
   </script>
+  #}
 {% endblock %}

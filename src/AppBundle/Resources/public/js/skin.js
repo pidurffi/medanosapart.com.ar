@@ -6,7 +6,6 @@
 //Hernancito SanPetesburgo
 
 function carga(ruta_panorama) {
-	alert("estoy");
 	// create the panorama player with the container
     pano=new pano2vrPlayer("container");
     // add the skin object
@@ -49,9 +48,7 @@ function pano2vrSkin(player,base) {
 	} else
 	if (base) {
 		basePath=base;
-	}
-	alert(base);
-	
+	}	
 	this.elementMouseDown=[];
 	this.elementMouseOver=[];
 	var cssPrefix='';

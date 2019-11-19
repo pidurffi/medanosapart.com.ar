@@ -61,11 +61,14 @@ $(document).ready(function(){
 			if(value == 0) {
 				$('.gallery ul li').removeClass('active');
 				$('.gallery ul li.one').addClass('active');
+                alert("va a cargar...");
+                carga("/bundles/app/images/panoramicas/habitacion-1/");
 
 			} else if(value == 1) {
 				$('.gallery ul li').removeClass('active');
 				$('.gallery ul li.two').addClass('active');
-                carga("{{ asset('bundles/app/images/panoramicas/suite/') }}");
+                //
+                //
 			} else if(value == 2) {
 				$('.gallery ul li').removeClass('active');
 				$('.gallery ul li.three').addClass('active');

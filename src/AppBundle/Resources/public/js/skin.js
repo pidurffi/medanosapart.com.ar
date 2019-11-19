@@ -33,6 +33,8 @@ function pano2vrSkin(player,base) {
 	if (base) {
 		basePath=base;
 	}
+	alert(base);
+	
 	this.elementMouseDown=[];
 	this.elementMouseOver=[];
 	var cssPrefix='';

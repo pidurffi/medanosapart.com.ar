@@ -87,6 +87,7 @@
 		</div>
 	</section>
 
+  {# 
   <script type="text/javascript">
     // create the panorama player with the container
     pano=new pano2vrPlayer("container");
@@ -97,5 +98,10 @@
     window.addEventListener("load", function() {
       pano.readConfigUrlAsync("{{ asset('bundles/app/images/panoramicas/habitacion-1/pano.xml') }}");
     });
+  </script> 
+  #}
+
+  <script type="text/javascript">
+   carga("{{ asset('bundles/app/images/panoramicas/habitacion-1/') }}");
   </script>
 {% endblock %}

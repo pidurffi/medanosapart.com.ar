@@ -3,6 +3,23 @@
 // Filename: finalmedanos.ggsk
 // Generated 2019-09-06T22:38:50
 
+//Hernancito SanPetesburgo
+
+function carga(ruta_panorama) {
+	alert("estoy");
+	// create the panorama player with the container
+    pano=new pano2vrPlayer("container");
+    // add the skin object
+    skin=new pano2vrSkin(pano,ruta_panorama);
+    // load the configuration
+  
+    window.addEventListener("load", function() {
+      pano.readConfigUrlAsync(ruta_panorama + "pano.xml");
+    });
+}
+
+//
+
 function pano2vrSkin(player,base) {
 	player.addVariable('opt_3d_preview', 2, true);
 	player.addVariable('opt_hotspot_preview', 2, true);

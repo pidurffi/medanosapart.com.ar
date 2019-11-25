@@ -6,6 +6,8 @@ var sliderHeight = function(){
 
 $(document).ready(function(){
 
+    
+
     /*HAMBURGER*/
     $('.hamburger').on('click', function(){
         if(!$('.hamburger').hasClass('is-active')) {
@@ -37,17 +39,17 @@ $(document).ready(function(){
 	});
 
 	//GALLERY TABS
-	var owlGallery = $(".owl-gallery");
-    owlGallery.owlCarousel({
-        singleItem: true,
-        pagination: false,
-        slideSpeed: 1000,
-        rewindSpeed: 1000,
-        touchDrag  : false,
-        mouseDrag  : false,
-        transitionStyle : "backSlide",
-        afterAction: owlGalleryCurrentPos
-    });
+	// var owlGallery = $(".owl-gallery");
+  //   owlGallery.owlCarousel({
+  //       singleItem: true,
+  //       pagination: false,
+  //       slideSpeed: 1000,
+  //       rewindSpeed: 1000,
+  //       touchDrag  : false,
+  //       mouseDrag  : false,
+  //       transitionStyle : "backSlide",
+  //       afterAction: owlGalleryCurrentPos
+  //   });
 
      /*SCROLL*/
     smoothScroll.init({
@@ -56,32 +58,32 @@ $(document).ready(function(){
         speed: 2000
     });
 
-    function owlGalleryCurrentPos() {
-			var value = this.owl.currentItem;
-			if(value == 0) {
-				$('.gallery ul li').removeClass('active');
-				$('.gallery ul li.one').addClass('active');
-                alert("va a cargar...");
-                carga("/bundles/app/images/panoramicas/habitacion-1/");
+//     function owlGalleryCurrentPos() {
+// 			var value = this.owl.currentItem;
+// 			if(value == 0) {
+// 				$('.gallery ul li').removeClass('active');
+// 				$('.gallery ul li.one').addClass('active');
+//                 alert("va a cargar...");
+//                 carga("/bundles/app/images/panoramicas/habitacion-1/");
 
-			} else if(value == 1) {
-				$('.gallery ul li').removeClass('active');
-				$('.gallery ul li.two').addClass('active');
-                //
-                //
-			} else if(value == 2) {
-				$('.gallery ul li').removeClass('active');
-				$('.gallery ul li.three').addClass('active');
-			} else if(value == 3) {
-				$('.gallery ul li').removeClass('active');
-				$('.gallery ul li.four').addClass('active');
-			}
-		};
+// 			} else if(value == 1) {
+// 				$('.gallery ul li').removeClass('active');
+// 				$('.gallery ul li.two').addClass('active');
+//                 //
+//                 //
+// 			} else if(value == 2) {
+// 				$('.gallery ul li').removeClass('active');
+// 				$('.gallery ul li.three').addClass('active');
+// 			} else if(value == 3) {
+// 				$('.gallery ul li').removeClass('active');
+// 				$('.gallery ul li.four').addClass('active');
+// 			}
+// 		};
 
-		$(".gallery ul li.one").click(function(){owlGallery.trigger('owl.goTo', 0);})
-		$(".gallery ul li.two").click(function(){owlGallery.trigger('owl.goTo', 1);})
-		$(".gallery ul li.three").click(function(){owlGallery.trigger('owl.goTo', 2);})
-$(".gallery ul li.four").click(function(){owlGallery.trigger('owl.goTo', 3);})
+// 		$(".gallery ul li.one").click(function(){owlGallery.trigger('owl.goTo', 0);})
+// 		$(".gallery ul li.two").click(function(){owlGallery.trigger('owl.goTo', 1);})
+// 		$(".gallery ul li.three").click(function(){owlGallery.trigger('owl.goTo', 2);})
+// $(".gallery ul li.four").click(function(){owlGallery.trigger('owl.goTo', 3);})
 
 	/*GALERIA DE FOTOS*/
 	var initPhotoSwipeFromDOM = function(gallerySelector) {

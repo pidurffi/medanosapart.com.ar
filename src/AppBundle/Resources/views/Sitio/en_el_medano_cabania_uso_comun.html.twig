@@ -38,19 +38,16 @@
 		<div class="container">
 			{{ render(controller('AppBundle:Default:enElMedanoText')) }}
       <ul class="int-med">
-        <li class="active"><a href="{{ path('en_el_medano') }}">Apart para 2 a 4 personas</a></li>
+        <li class=""><a href="{{ path('en_el_medano') }}">Apart para 2 a 4 personas</a></li>
         <li class=""><a href="{{ path('en_el_medano_cabania_2a4') }}">Cabañas para 2 a 4 personas</a></li>
         <li class=""><a href="{{ path('en_el_medano_cabania_3a5') }}">Cabañas para 3 a 5 personas</a></li>
-        <li class=""><a href="{{ path('en_el_medano_cabania_uso_comun') }}">Espacios de uso común</a></li>
+        <li class="active"><a href="{{ path('en_el_medano_cabania_uso_comun') }}">Espacios de uso común</a></li>
       </ul>
       <div class="owl-content">
-        <h3 class="owl-title">Apart para 2 a 4 personas</h3>
-        <p class="owl-text">Amplio apartamento de 2 ambientes, dormitorio matrimonial con sommier de 1,60,  living con dos divanes cama, comedor, cocina completa, baño con hidromasaje doble. Deck con parrilla individual.</p>
-        <h4 class="owl-subtitle">Recorrido panorámico</h4>
-        <div id="container" style="width:100%;height:500px;overflow:hidden;"></div>
+        <h3 class="owl-title">Espacios de uso común</h3>
         <h4 class="owl-subtitle">Galería de fotos</h4>
         <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-          {{ render(controller('AppBundle:Default:galeria',{galeria_id: 4})) }}
+          {{ render(controller('AppBundle:Default:galeria',{galeria_id: 3})) }}
         </div>
       </div>
 		</div>
@@ -101,7 +98,7 @@
 	</section> #}
 
   
-  <script type="text/javascript">
+  {# <script type="text/javascript">
     // create the panorama player with the container
     pano=new pano2vrPlayer("container");
     // add the skin object
@@ -116,6 +113,6 @@
 
   <script type="text/javascript">
    carga("{{ asset('bundles/app/images/panoramicas/habitacion-1/') }}");
-  </script>
+  </script> #}
  
 {% endblock %}

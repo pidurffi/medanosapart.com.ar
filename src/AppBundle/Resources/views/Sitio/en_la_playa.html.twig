@@ -34,24 +34,24 @@
 
 	<section class="info" id="info">
 		<div class="container">
-			<h2>Apartamentos de 3 ambientes</h2>
-			<p>Capacidad para 2 a 4 pasajeros.</p>
-			<p>Ubicados sobre la playa , con excelente vista al mar.</p>
-			<p>Apartamentos en planta baja ( 3 ambientes con doble altura , medios niveles y dormitorio matrimonial independiente).</p>
-			<p>Cada uno consta de living comedor, cocina completa, baño.</p>
-			<p>En el nivel superior balconeando está el dormitorio con 2 camas simples más la habitación matrimonial y un toillette.</p>
-			
-			<h2 class="sub">Apartamento en planta alta</h2>
-			
-			<p> 3 ambientes desarrollado en una sola planta.
-			<p>Consta de living , comedor, cocina integrada, habitación matrimonial , dormitorio con 2 camas individuales , antebaño y baño con ducha.</p>
-			<p>Balcón privado con parrilla y la mejor vista al mar.</p>
-			<p>En el exterior están las parrillas individuales de la planta baja y en la parte posterior las cocheras cubiertas desde las cuales se accede por una escalera.</p>
-</p>
+			{{ render(controller('AppBundle:Default:enLaPlayaText')) }}
+      <ul class="int-med three">
+        <li class="active"><a href="{{ path('en_la_playa') }}">Apartamentos de 3 ambientes</a></li>
+        <li class=""><a href="{{ path('en_la_playa_planta_alta') }}">Apartamento en planta alta</a></li>
+        <li class=""><a href="{{ path('en_la_playa_uso_comun') }}">Espacios de uso común</a></li>
+      </ul>
+      <div class="owl-content">
+        <h4 class="owl-subtitle">Recorrido panorámico</h4>
+        <div id="container" style="width:100%;height:500px;overflow:hidden;"></div>
+        <h4 class="owl-subtitle">Galería de fotos</h4>
+        <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          {{ render(controller('AppBundle:Default:galeria',{galeria_id: 2})) }}
+        </div>
+      </div>
 		</div>
 	</section>
 
-	<section class="gallery" id="gallery">
+	{# <section class="gallery" id="gallery">
 		<div class="container">
 			<h2>Galería de fotos</h2>
 			<ul>
@@ -62,20 +62,37 @@
 			<div class="owl-gallery">
 				<div>
 					<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-						{{ render(controller('AppBundle:Default:galeria',{galeria_id: 2})) }} {# Los Lofts #}
+						{{ render(controller('AppBundle:Default:galeria',{galeria_id: 2})) }}
 					</div>
 				</div>
 				<div>
 					<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-						{{ render(controller('AppBundle:Default:galeria',{galeria_id: 1})) }} {# La Cabaña #}
+						{{ render(controller('AppBundle:Default:galeria',{galeria_id: 1})) }}
 					</div>
 				</div>
 				<div>
 					<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-						{{ render(controller('AppBundle:Default:galeria',{galeria_id: 3})) }} {# Espacios comunes #}
+						{{ render(controller('AppBundle:Default:galeria',{galeria_id: 3})) }}
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> #}
+
+  <script type="text/javascript">
+    // create the panorama player with the container
+    pano=new pano2vrPlayer("container");
+    // add the skin object
+    skin=new pano2vrSkin(pano,"{{ asset('bundles/app/images/panoramicas/habitacion-1/') }}");
+    // load the configuration
+  
+    window.addEventListener("load", function() {
+      pano.readConfigUrlAsync("{{ asset('bundles/app/images/panoramicas/habitacion-1/pano.xml') }}");
+    });
+  </script> 
+  
+
+  <script type="text/javascript">
+   carga("{{ asset('bundles/app/images/panoramicas/habitacion-1/') }}");
+  </script>
 {% endblock %}

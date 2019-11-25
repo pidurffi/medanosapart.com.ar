@@ -29,12 +29,57 @@ class DefaultController extends Controller
     {
     	return array();
     }
+
+    /**
+     * @Route("/en-la-playa-planta-alta", name="en_la_playa_planta_alta")
+     * @Template("AppBundle:Sitio:en_la_playa_planta_alta.html.twig")
+     */
+    public function enLaPlayaPlantaAltaAction(Request $request)
+    {
+    	return array();
+    }
+
+    /**
+     * @Route("/en-la-playa-uso-comun", name="en_la_playa_uso_comun")
+     * @Template("AppBundle:Sitio:en_la_playa_uso_comun.html.twig")
+     */
+    public function enLaPlayaUsoComunAction(Request $request)
+    {
+    	return array();
+    }
     
     /**
      * @Route("/en-el-medano", name="en_el_medano")
      * @Template("AppBundle:Sitio:en_el_medano.html.twig")
      */
     public function enElMedanoAction(Request $request)
+    {
+    	return array();
+    }
+
+    /**
+     * @Route("/en-el-medano-cabania-2a4", name="en_el_medano_cabania_2a4")
+     * @Template("AppBundle:Sitio:en_el_medano_cabania_2a4.html.twig")
+     */
+    public function enElMedano2a4Action(Request $request)
+    {
+    	return array();
+    }
+
+    /**
+     * @Route("/en-el-medano-cabania-3a5", name="en_el_medano_cabania_3a5")
+     * @Template("AppBundle:Sitio:en_el_medano_cabania_3a5.html.twig")
+     */
+    public function enElMedano3a5Action(Request $request)
+    {
+    	return array();
+    }
+
+    /**
+     * @Route("/en-el-medano-cabania-uso-comun", name="en_el_medano_cabania_uso_comun")
+     * @Template("AppBundle:Sitio:en_el_medano_cabania_uso_comun.html.twig")
+     */
+    public function enElMedanoUsoComunAction(Request $request)
     {
     	return array();
     }
@@ -47,6 +92,24 @@ class DefaultController extends Controller
     {
     	return array();
     }
+
+    /**
+     * @Route("/en-el-bosque-6", name="en_el_bosque_6")
+     * @Template("AppBundle:Sitio:en_el_bosque_6.html.twig")
+     */
+    public function enElBosque6Action(Request $request)
+    {
+    	return array();
+    }
+
+    /**
+     * @Route("/en-el-bosque-uso-comun", name="en_el_bosque_uso_comun")
+     * @Template("AppBundle:Sitio:en_el_bosque_uso_comun.html.twig")
+     */
+    public function enElBosqueUsoComunAction(Request $request)
+    {
+    	return array();
+    }
     
     /**
      * @Template("AppBundle:Sitio:component_galeria.html.twig")
@@ -54,6 +117,27 @@ class DefaultController extends Controller
     public function galeriaAction(Request $request,$galeria_id) {
     	$galeria = $this->getDoctrine()->getRepository('AppBundle:Galeria')->find($galeria_id);
     	return array('galeria'=>$galeria);
+    }
+
+    /**
+     * @Template("AppBundle:Sitio:en_el_medano_text.html.twig")
+     */
+    public function enElMedanoTextAction(Request $request) {
+    	return array();
+    }
+
+    /**
+     * @Template("AppBundle:Sitio:en_el_bosque_text.html.twig")
+     */
+    public function enElBosqueTextAction(Request $request) {
+    	return array();
+    }
+
+    /**
+     * @Template("AppBundle:Sitio:en_la_playa_text.html.twig")
+     */
+    public function enLaPlayaTextAction(Request $request) {
+    	return array();
     }
     
     

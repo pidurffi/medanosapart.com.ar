@@ -1,15 +1,14 @@
 {% extends "AppBundle::Sitio/layout.html.twig" %}
 {% block content %}	
-
 	<section class="intro int">
 		<div class="slider-int">
-			<img src="{{ asset('bundles/app/images/slider/-003.jpg') }}" alt="">
+			<img src="{{ asset('bundles/app/images/slider/-001.jpg') }}" alt="">
 		</div>
 		<div class="sub-header">
 			<div class="container">
 				<ul>
-					<li><span class="icon-mail"></span> info@medanosapart.com.ar</li>
-					<li><span class="icon-pin"></span> Ubicación</li>
+					<li><span class="icon-mail"></span>info@medanosapart.com.ar</li>
+					<li><span class="icon-pin"></span>Ubicación</li>
 					<li><span class="icon-telefono"></span> (02255) 15 50.7575</li>
 				</ul>
 			</div>
@@ -21,11 +20,11 @@
 						<span class="hamburger-inner"></span>
 					</span>
 				</button>
-				<div class="logo bosque"></div>
+				<div class="logo playa"></div>
 				<nav>
 					<ul>
 						<li><a href="{{ path('homepage') }}">Inicio</a></li>
-						<li><a data-scroll href="#info">Las Cabañas</a></li>
+						<li><a data-scroll href="#info">Apartamentos de 3 amb</a></li>
 						<li><a data-scroll href="#gallery">Galería de fotos</a></li>
 					</ul>
 				</nav>
@@ -35,46 +34,45 @@
 
 	<section class="info" id="info">
 		<div class="container">
-			{{ render(controller('AppBundle:Default:enElBosqueText')) }}
+			{{ render(controller('AppBundle:Default:enLaPlayaText')) }}
       <ul class="int-med three">
-        <li class="one active"><a href="{{ path('en_el_bosque') }}">Bosque 3-5 personas</a></li>
-				<li class="two"><a href="{{ path('en_el_bosque_6') }}">Bosque 6 personas</a></li>
-				<li class="three"> <a href="{{ path('en_el_bosque_uso_comun') }}">Espacios de uso común</a></li>
+        <li class=""><a href="{{ path('en_la_playa') }}">Apartamentos de 3 ambientes</a></li>
+        <li class="active"><a href="{{ path('en_la_playa_planta_alta') }}">Apartamento en planta alta</a></li>
+        <li class=""><a href="{{ path('en_la_playa_uso_comun') }}">Espacios de uso común</a></li>
       </ul>
       <div class="owl-content">
         <h4 class="owl-subtitle">Recorrido panorámico</h4>
         <div id="container" style="width:100%;height:500px;overflow:hidden;"></div>
         <h4 class="owl-subtitle">Galería de fotos</h4>
         <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-          {{ render(controller('AppBundle:Default:galeria',{galeria_id: 7})) }}
+          {{ render(controller('AppBundle:Default:galeria',{galeria_id: 1})) }}
         </div>
       </div>
 		</div>
 	</section>
-	
 
 	{# <section class="gallery" id="gallery">
 		<div class="container">
 			<h2>Galería de fotos</h2>
 			<ul>
-				<li class="one">Bosque 3-5 personas</li>
-				<li class="two">Bosque 6 personas</li>
+				<li class="one">Apartamentos de 3 ambientes</li>
+				<li class="two">Apartamento en planta alta</li>
 				<li class="three">Espacios de uso común</li>
 			</ul>
 			<div class="owl-gallery">
 				<div>
 					<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-						{{ render(controller('AppBundle:Default:galeria',{galeria_id: 7})) }} 
+						{{ render(controller('AppBundle:Default:galeria',{galeria_id: 2})) }}
 					</div>
 				</div>
 				<div>
 					<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-						{{ render(controller('AppBundle:Default:galeria',{galeria_id: 8})) }} 
+						{{ render(controller('AppBundle:Default:galeria',{galeria_id: 1})) }}
 					</div>
 				</div>
 				<div>
 					<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-						{{ render(controller('AppBundle:Default:galeria',{galeria_id: 3})) }} 
+						{{ render(controller('AppBundle:Default:galeria',{galeria_id: 3})) }}
 					</div>
 				</div>
 			</div>

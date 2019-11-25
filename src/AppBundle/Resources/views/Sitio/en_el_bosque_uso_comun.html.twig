@@ -37,16 +37,13 @@
 		<div class="container">
 			{{ render(controller('AppBundle:Default:enElBosqueText')) }}
       <ul class="int-med three">
-        <li class="one active"><a href="{{ path('en_el_bosque') }}">Bosque 3-5 personas</a></li>
+        <li class="one"><a href="{{ path('en_el_bosque') }}">Bosque 3-5 personas</a></li>
 				<li class="two"><a href="{{ path('en_el_bosque_6') }}">Bosque 6 personas</a></li>
-				<li class="three"> <a href="{{ path('en_el_bosque_uso_comun') }}">Espacios de uso común</a></li>
+				<li class="three active"> <a href="{{ path('en_el_bosque_uso_comun') }}">Espacios de uso común</a></li>
       </ul>
       <div class="owl-content">
-        <h4 class="owl-subtitle">Recorrido panorámico</h4>
-        <div id="container" style="width:100%;height:500px;overflow:hidden;"></div>
-        <h4 class="owl-subtitle">Galería de fotos</h4>
         <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-          {{ render(controller('AppBundle:Default:galeria',{galeria_id: 7})) }}
+          {{ render(controller('AppBundle:Default:galeria',{galeria_id: 3})) }}
         </div>
       </div>
 		</div>
@@ -74,27 +71,10 @@
 				</div>
 				<div>
 					<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-						{{ render(controller('AppBundle:Default:galeria',{galeria_id: 3})) }} 
+						{{ render(controller('AppBundle:Default:galeria',{galeria_id: 3})) }}
 					</div>
 				</div>
 			</div>
 		</div>
 	</section> #}
-
-  <script type="text/javascript">
-    // create the panorama player with the container
-    pano=new pano2vrPlayer("container");
-    // add the skin object
-    skin=new pano2vrSkin(pano,"{{ asset('bundles/app/images/panoramicas/habitacion-1/') }}");
-    // load the configuration
-  
-    window.addEventListener("load", function() {
-      pano.readConfigUrlAsync("{{ asset('bundles/app/images/panoramicas/habitacion-1/pano.xml') }}");
-    });
-  </script> 
-  
-
-  <script type="text/javascript">
-   carga("{{ asset('bundles/app/images/panoramicas/habitacion-1/') }}");
-  </script>
 {% endblock %}

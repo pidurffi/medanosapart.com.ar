@@ -1947,7 +1947,10 @@ body, html {
   left: 0;
   top: 0;
 }
-.intro.int, .intro.int .slider-int {height: 300px!important;}
+.intro.int, .intro.int .slider-int {height: auto!important;}
+@media (min-width: 768px) {
+  .intro.int, .intro.int .slider-int {height: 300px!important;}
+}
 @media (max-width: 767px) {
   /* line 161, ../sass/screen.scss */
   .intro .slider {
@@ -2445,7 +2448,7 @@ footer p, footer ul li a {
 @media (max-width: 767px) {
   /* line 544, ../sass/screen.scss */
   .info {
-    margin-top: 70px;
+    margin-top: 0;
   }
 }
 
@@ -2456,27 +2459,39 @@ footer p, footer ul li a {
   text-transform: uppercase;
   text-align: center;
 }
+.owl-content {
+  padding: 40px 0;
+}
+
+.owl-content .owl-subtitle:first-child {
+  margin-top: 0;
+}
 /* line 577, ../sass/screen.scss */
-.gallery ul {
+ul.int-med {
+  display: grid;
+  grid-template-columns: 1fr;
   margin-top: 40px;
 }
-/* line 14, ../sass/bootstrap/mixins/_clearfix.scss */
-.gallery ul:before, .gallery ul:after {
-  content: " ";
-  display: table;
+
+ul.int-med.three {
+  grid-template-columns: 1fr;
 }
-/* line 19, ../sass/bootstrap/mixins/_clearfix.scss */
-.gallery ul:after {
-  clear: both;
+@media (min-width: 768px) {
+  ul.int-med {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 40px;
+  }
+  
+  ul.int-med.three {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 /* line 580, ../sass/screen.scss */
-.gallery ul li {
+ul.int-med li {
   position: relative;
   display: block;
-  float: left;
-  padding: 20px;
-  width: 33.3%;
-  font-size: 20px;
+  font-size: 14px;
   color: #fff;
   text-align: center;
   text-transform: uppercase;
@@ -2485,8 +2500,17 @@ footer p, footer ul li a {
   -o-transition: color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   transition: color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
+ul.int-med li a {
+  display: block;
+  padding: 20px;
+  color: white;
+  transition: color .25s ease;
+}
+ul.int-med li:hover a {
+  color: #cc6600;
+}
 /* line 592, ../sass/screen.scss */
-.gallery ul li:before {
+ul.int-med li:before {
   content: '';
   position: absolute;
   visibility: hidden;
@@ -2505,22 +2529,24 @@ footer p, footer ul li a {
   transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), visibility 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 /* line 605, ../sass/screen.scss */
-.gallery ul li:hover {
+ul.int-med li:hover {
   cursor: pointer;
   color: #cc6600;
 }
 /* line 610, ../sass/screen.scss */
-.gallery ul li.active:before {
+ul.int-med li.active a {
+  color: #cc6600;
+}
+ul.int-med li.active:before {
   visibility: visible;
   -moz-transform: scaleX(1);
   -ms-transform: scaleX(1);
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
-.gallery ul.int-med li {width: 25%; font-size: 16px;}
 @media (max-width: 767px) {
   /* line 619, ../sass/screen.scss */
-  .gallery ul li {
+  ul.int-med li {
     float: none;
     width: 100%!important;
     padding: 5px;

@@ -39,6 +39,15 @@ class DefaultController extends Controller
     	return array();
     }
 
+     /**
+     * @Route("/en-la-playa-suite", name="en_la_playa_suite")
+     * @Template("AppBundle:Sitio:en_la_playa_suite.html.twig")
+     */
+    public function enLaPlayaSuiteAction(Request $request)
+    {
+    	return array();
+    }
+
     /**
      * @Route("/en-la-playa-uso-comun", name="en_la_playa_uso_comun")
      * @Template("AppBundle:Sitio:en_la_playa_uso_comun.html.twig")

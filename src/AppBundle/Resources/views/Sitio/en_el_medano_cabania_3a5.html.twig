@@ -105,17 +105,17 @@
     // create the panorama player with the container
     pano=new pano2vrPlayer("container");
     // add the skin object
-    skin=new pano2vrSkin(pano,"{{ asset('bundles/app/images/panoramicas/habitacion-1/') }}");
+    skin=new pano2vrSkin(pano,"{{ asset('bundles/app/images/panoramicas/en-el-medano-cabania-3a5/') }}");
     // load the configuration
   
     window.addEventListener("load", function() {
-      pano.readConfigUrlAsync("{{ asset('bundles/app/images/panoramicas/habitacion-1/pano.xml') }}");
+      pano.readConfigUrlAsync("{{ asset('bundles/app/images/panoramicas/en-el-medano-cabania-3a5/pano.xml') }}");
     });
   </script> 
   
 
   <script type="text/javascript">
-   carga("{{ asset('bundles/app/images/panoramicas/habitacion-1/') }}");
+   carga("{{ asset('bundles/app/images/panoramicas/en-el-medano-cabania-3a5/') }}");
   </script>
  
 {% endblock %}
